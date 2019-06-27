@@ -1,0 +1,63 @@
+<div class="card">
+  <div class="card-header">
+    Existing Machine Details
+  </div>
+  <div class="card-body">
+      <form [formGroup]="machineDetail">
+    <div class="row">
+      <div class="col-md-2">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>PTO Driven Equipment</mat-label>
+            <mat-select formControlName="equipmentMake">
+              <mat-option *ngFor="let pto of ptoEquipments" [value]="pto.value">
+                {{pto.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      
+        <div class="col-md-2">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>State Make</mat-label>
+            <mat-select formControlName="ptoDrivenEq">
+              <mat-option *ngFor="let statemake of stateMakes" [value]="statemake.value">
+                {{statemake.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      
+        <div class="col-md-2">
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Equipment Make</mat-label>
+              <mat-select formControlName="stateMake">
+                <mat-option *ngFor="let equipment of equipmentMake" [value]="equipment.value">
+                  {{equipment.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+  </div>
+</form>
+</div> 
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+        <div class="center">
+            <button class="btn btn-primary " (click)="onPrvClick()">Previous</button>
+        
+          </div> 
+    </div>
+    <div class="col-md-2">
+        <div class="center">
+            <button class="btn btn-primary " (click)="pageClick()">Submit</button>
+        
+          </div> 
+    </div>
+  </div>
+
+
+</div>  
+</div>
+

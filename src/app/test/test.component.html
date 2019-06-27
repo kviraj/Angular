@@ -1,0 +1,22 @@
+<p>
+  test works!
+</p>
+<h1>This is written in the test component in the html file.</h1>
+<h2>Welcome to the {{name}}</h2>
+<h3>{{2+2}}</h3>
+<h2>{{"Welcome " +car}}</h2>
+<p>{{car.length}}</p>
+<p>{{car.toUpperCase()}}</p>
+<hr>
+<button [disabled]="isUnchanged">Disabled button</button>
+<button [disabled]="!allowNewServer">Hello</button>
+
+<h3 [style.color]="'purple'">Style Binding</h3>
+<hr>
+<h1 [style.color]="hasError?'green':'red' ">Style Binding</h1>
+<button (click)="onClick()" >Event binding</button>
+<p>{{greeting}}</p>
+<p id="demos"></p>
+
+<button (click)="onSave($event)">Save</button>
+{{saving}}
